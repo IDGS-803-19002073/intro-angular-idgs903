@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IAlumnos } from '../alumnos';
 
 @Component({
   selector: 'app-ievn',
@@ -17,7 +18,7 @@ export class IevnComponent {
   this.muestraImg=!this.muestraImg;
 }
 
-  alumnos:any[]=[
+  alumnos:IAlumnos[]=[
     {
       "matricula":123,
       "nombre":"Karin Benzema",
@@ -25,7 +26,7 @@ export class IevnComponent {
       "correo":"leo_fcleon@hotmail.com",
       "pago":123.456,
       "foto":"https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQPDBfQrcy5A56CdiOArFbV43e93fmqZOKdH_owpFsqvQJBDeS0X81N4aNUENzVOGdxxOrkkHQ3joji9_U"
-
+      ,"calif":9
     },
     {
       "matricula":333,
@@ -33,7 +34,9 @@ export class IevnComponent {
       "edad":20,
       "correo":"mbappe_fcparissaintgerman@hotmail.com",
       "pago":1239.42,
-      "foto":"https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQPDBfQrcy5A56CdiOArFbV43e93fmqZOKdH_owpFsqvQJBDeS0X81N4aNUENzVOGdxxOrkkHQ3joji9_U"
+      "foto":"https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQPDBfQrcy5A56CdiOArFbV43e93fmqZOKdH_owpFsqvQJBDeS0X81N4aNUENzVOGdxxOrkkHQ3joji9_U",
+      "calif":6
+
     }
     
   ]

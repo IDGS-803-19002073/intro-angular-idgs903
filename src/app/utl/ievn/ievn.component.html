@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-2">Filtrar por:</div>
         <div class="col-md-4">
-          <!-- <input [(ngModel)]="listFilter"  name ="filter" class="form-control" type="text"/> -->
+          <input [(ngModel)]="listFilter"  name ="filter" class="form-control" type="text"/>
         </div>
       </div>
       <div class="row">
@@ -25,10 +25,11 @@
               <th>Edad</th>
               <th>Correo</th>
               <th>Pago</th>
+              <th>Calificacion</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let alumno of alumnos">
+            <tr *ngFor="let alumno of alumnos |alumnosFilter:listFilter">
                 <td></td>
               <td><img *ngIf="muestraImg" [src]="alumno.foto" [title]="alumno.nombre" [style.width.px]="imageWidth"
                   [style.margin.px]="imageMargin"></td>
@@ -37,6 +38,8 @@
                   <td>{{alumno.edad}}</td>
                   <td>{{alumno.correo}}</td>
                   <td>{{alumno.pago | currency}}</td>
+                  <td>8</td>
+
             </tr>
           </tbody>
         </table>
